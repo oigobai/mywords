@@ -12,7 +12,7 @@ async function translateAndProvideExamples(text) {
     const response = await axios.post(
       'https://api.openai.com/v1/completions',
       {
-        model: 'text-davinci-003', // You might need to adjust the model based on availability
+        model: 'gpt-3.5-turbo-instruct', // You might need to adjust the model based on availability
         prompt: `Detect the language of the following text and translate it to the other language (English <-> Russian). Provide two example sentences using the translated word or phrase.\n\n"${text}"`,
         temperature: 0.5,
         max_tokens: 100,
